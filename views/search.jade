@@ -1,0 +1,16 @@
+include ./mixin/common
+extends layout
+
+block content
+	.width.left
+		+title()
+		input#search-from(size=50 style="padding:15px;")
+		br
+		br
+		a(href="/") Back
+	#map.width.right.height-100
+block site-js
+	script.
+		window.onload = function() {
+		  searchBox();
+		};

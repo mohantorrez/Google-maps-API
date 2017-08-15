@@ -1,0 +1,28 @@
+include ./mixin/common
+extends layout
+
+block content
+	.width.left
+		+title()
+		.from
+			input#search-from(size=50 style="padding:10px;")
+		.to(style="margin-top:15px;")
+			input#search-to(size=50 style="padding:10px;")
+		.submit(style="margin-top:15px;")
+			button(onclick="calculateDistance()") 
+				| Submit
+			a(href="/" style="margin-left:20px;") Back
+
+		#dPanel(style="max-height:250px; overflow-x:overlay;")
+
+
+		#output
+
+	br
+	br
+	#map.width.right.height-100
+block site-js
+	script.
+		window.onload = function() {
+		  searchBox();
+		};

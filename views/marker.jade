@@ -1,0 +1,17 @@
+include ./mixin/common
+extends layout
+
+block content
+	.width.left
+		+title()
+		ul
+			li.margin-bottom-15px
+				a(onclick="animation()") Add Animation
+			li.margin-bottom-15px
+				a(onclick="customIcon()") Change Icon
+			li.margin-bottom-15px
+				a(onclick="removeMarker()") Remove Marker
+	br
+	br
+	a(href="/") Back
+	#map.width.right.height-100

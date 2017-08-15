@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.left.width
+		h1= title
+		p Welcome to #{title}
+		ul
+			li.margin-bottom-15px
+				a(href="search") Search Box
+			li.margin-bottom-15px
+				a(href="marker") Custom Marker 
+			li.margin-bottom-15px
+				a(href="directions") Directions 
+	script(src="https://maps.googleapis.com/maps/api/js?key=#{apiKey}&callback=initMap&libraries=places" async defer)
+	#map.width.right.height-100
